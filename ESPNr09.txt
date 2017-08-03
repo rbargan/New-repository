@@ -1,18 +1,7 @@
 #INCLUDE "RPTDEF.CH"
 #INCLUDE "FWPrintSetup.ch"
 #INCLUDE "protheus.ch"
-/*ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-±±ÉÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍ»±±
-±±ºPrograma  ³ESPNR09   ºAutor  ³Renato Bargan       º Data ³  07/25/17   º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºDesc.     ³ listagem de empréstimo ENG. 									     º±±
-±±º          ³ controle de entrada e saída                                º±±
-±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
-±±ºUso       ³ AP                                                 	     º±±
-±±ÈÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼±±
-±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
-ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß*/
+
 User Function ESPNR09(oPrn)
 Local oft
 Local oFont
@@ -66,13 +55,13 @@ oPrn:SayBitmap(vInicio,hInicio,"\system\LGMID01.png",200,200)//logo ESPN
 oPrn:line(vInicio+175	,hLimite-325	,vInicio+320		  		 										,hLimite-325)//coluna3
 MSBAR3("CODE128",1.85,16.2,'000000'+ZZD->ZZD_PEDIDO,oPrn,.F.,,.T.,0.022,0.75,.F.,,"C",.F.)//cod barras
 
-oPrn:Say	(vInicio+30		,hInicio+750	,"Listagem de Empréstimos"			  	  						,oFnt)
+oPrn:Say	(vInicio+30		,hInicio+750	,"Listagem de EmprÃ©stimos"			  	  						,oFnt)
 oPrn:box	(vInicio+175	,hInicio			,vinicio+320						 		 						,hLimite)//retangulo superior
 
 oPrn:line(vInicio+175	,hInicio+510	,vInicio+320							 		 			 		,hInicio+510)//coluna1
 oPrn:Say	(vInicio+190	,hInicio+20		,"Filial:"										  			 		,oft)
 oPrn:Say (vInicio+190	,hInicio+220	,SM0->M0_FILIAL											 		,oLr)
-oPrn:Say (vInicio+230	,hInicio+20		,"Empréstimos:"							 				 		,oft)
+oPrn:Say (vInicio+230	,hInicio+20		,"EmprÃ©stimos:"							 				 		,oft)
 oPrn:Say (vInicio+230	,hInicio+220	,ZZD->ZZD_CODIGO							 				 		,oLr)
 oPrn:Say	(vInicio+270	,hInicio+20		,"Data | Hora:"								  				 	,oft)
 oPrn:Say	(vInicio+270	,hInicio+220	,dtoc(dDataBase) + ' - ' + left(time(),5)				,oLr)
@@ -86,7 +75,7 @@ oPrn:Say	(vInicio+270	,hInicio+520	,"Almoxarife:"								 						,oft)
 oPrn:Say	(vInicio+270	,hInicio+720	,Alltrim(UsrRetName(ZZD->ZZD_USRCOD))						,oLr)
 
 cMennota	:= sc5->c5_mennota  
-oPrn:Say	(vInicio+190	,hInicio+1020	,"Observações:"	  												,oft)
+oPrn:Say	(vInicio+190	,hInicio+1020	,"ObservaÃ§Ãµes:"	  												,oft)
 oPrn:Say	(vInicio+230	,hInicio+1020	,SUBSTR(cMennota, 1, AT("|", cMennota) - 1) 			,oLr)
 oPrn:Say	(vInicio+270	,hInicio+1020	,SUBSTR(cMennota, AT("|", cMennota) + 2)   				,oLr)
 
@@ -149,7 +138,7 @@ oPrn:line(linha+200	,hinicio+20		,Linha+200														 													,hinicio+
 oPrn:Say	(linha+340	,hinicio+20		,"Recebido por:"																	 								,oLtr)
 oPrn:line(linha+370	,hinicio+170	,Linha+370																											,hinicio+900)
 oPrn:box	(linha+100	,hinicio+970	,linha+370													  					  									,hLimite-50)
-oPrn:Say	(linha+110	,hinicio+980	,"Observações:"											  														,oLtr)
+oPrn:Say	(linha+110	,hinicio+980	,"ObservaÃ§Ãµes:"											  														,oLtr)
 
 oPrn:EndPage()   //termino impressao
 oPrn:Preview()  // Visualiza antes de imprimir
