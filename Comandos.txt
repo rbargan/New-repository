@@ -1,4 +1,8 @@
-ALLTRIM
+﻿ALLTRIM
 Remove os espaços em branco do início e do fim de uma cadeia de caracteres.
+
 cell
 Retorna objeto da classe TRCell (célula) baseado no parametro informado. Se não for encontrado o objeto segundo o parametro informado será retornado Nulo
+
+dBGoto
+Move o cursor da área de trabalho ativa para o número do registro (Recno) especificado, realizando um posicionamento direto, sem a necessidade de uma busca (Seek) prévia.
