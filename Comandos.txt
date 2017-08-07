@@ -1,2 +1,4 @@
 ALLTRIM
-Remove os espa�os em branco do in�cio e do fim de uma cadeia de caracteres.
+Remove os espaços em branco do início e do fim de uma cadeia de caracteres.
+cell
+Retorna objeto da classe TRCell (célula) baseado no parametro informado. Se não for encontrado o objeto segundo o parametro informado será retornado Nulo
