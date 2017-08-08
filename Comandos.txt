@@ -18,6 +18,3 @@ Move o cursor do registro posicionado para o próximo registro (ou anterior, dep
 
 EOF
 Determina se o final do arquivo de dados foi atingido.
-
-
-
