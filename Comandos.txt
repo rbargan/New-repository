@@ -1,13 +1,29 @@
-﻿ALLTRIM
+﻿ALLTRIM()
 Remove os espaços em branco do início e do fim de uma cadeia de caracteres.
 
-cell
+cell()
 Retorna objeto da classe TRCell (célula) baseado no parametro informado. Se não for encontrado o objeto segundo o parametro informado será retornado Nulo
 
-dbGoTop
+dbGoTop()
 Move o cursor da área de trabalho ativa para o número do registro (Recno) especificado, realizando um posicionamento direto, sem a necessidade de uma busca (Seek) prévia.
 
-dbSeek
+dbSeek()
 Pesquisa a área de trabalho ativa para encontrar um determinado registro, de acordo com a chave de pesquisa utilizada.
 
+dbSetOrder()
+Indica o número que representa a ordem do índice que será utilizado -
 
+dbSkip()
+Move o cursor do registro posicionado para o próximo registro (ou anterior, dependendo do argumento), de acordo com o índice ativo para a área de trabalho
+
+EOF()
+Determina se o final do arquivo de dados foi atingido.
+
+FCount()
+Retorna a quantidade de campos existentes na estrutura da área de trabalho ativa.
+
+FieldPut()
+Recupera ou lê o valor de um campo, de acordo com a sua posição dentro da estrutura do arquivo de dados, fornecendo o seu conteúdo.
+
+FIELPOS()
+A função tem a funcionalidade de retornar a posição de um determinado campo dentro da estrutura do alias corrente. Caso o campo não exista na estrutura, é retornado zero.Assim, sempre que for se referenciar um determinado campo, criado por um compatibilizador, ou criado em versão/release, proteja a execução com a função FieldPos.
