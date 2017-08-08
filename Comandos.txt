@@ -27,3 +27,20 @@ Recupera ou lê o valor de um campo, de acordo com a sua posição dentro da est
 
 FIELPOS()
 A função tem a funcionalidade de retornar a posição de um determinado campo dentro da estrutura do alias corrente. Caso o campo não exista na estrutura, é retornado zero.Assim, sempre que for se referenciar um determinado campo, criado por um compatibilizador, ou criado em versão/release, proteja a execução com a função FieldPos.
+
+FT_FEOF ( )
+Indica se o ponteiro está posicionado no fim do arquivo texto.
+
+FT_FGOTOP()
+Posiciona no início (primeiro caracter da primeira linha) do arquivo texto aberto pela função 
+
+FT_FREADLN ()
+Lê e retorna uma linha de texto do arquivo aberto pela função FT_FUse()
+
+"FT_FReadLn()
+"Retorna a linha inteira na qual está posicionado o ponteiro para leitura de dados.
+"
+
+
+
+
