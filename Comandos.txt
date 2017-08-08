@@ -10,4 +10,11 @@ Move o cursor da área de trabalho ativa para o número do registro (Recno) espe
 dbSeek
 Pesquisa a área de trabalho ativa para encontrar um determinado registro, de acordo com a chave de pesquisa utilizada.
 
+dbSetOrder
+Indica o número que representa a ordem do índice que será utilizado -
 
+dbSkip
+Move o cursor do registro posicionado para o próximo registro (ou anterior, dependendo do argumento), de acordo com o índice ativo para a área de trabalho
+
+EOF
+Determina se o final do arquivo de dados foi atingido.
