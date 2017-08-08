@@ -35,7 +35,17 @@ Indica se o ponteiro está posicionado no fim do arquivo texto.
 FT_FGOTOP()
 Posiciona no início (primeiro caracter da primeira linha) do arquivo texto aberto pela função 
 
-FT_FREADLN
+FT_FREADLN ()
 Lê e retorna uma linha de texto do arquivo aberto pela função FT_FUse()
+
+FT_FReadLn
+()
+Retorna a linha inteira na qual está posicionado o ponteiro para leitura de dados.
+"
+
+
+FT_FSKIP()
+Move o ponteiro, do arquivo texto aberto pela função FT_FUse(), para uma nova posição
+
 
 
