@@ -29,23 +29,41 @@ FIELPOS()
 A função tem a funcionalidade de retornar a posição de um determinado campo dentro da estrutura do alias corrente. Caso o campo não exista na estrutura, é retornado zero.Assim, sempre que for se referenciar um determinado campo, criado por um compatibilizador, ou criado em versão/release, proteja a execução com a função FieldPos.
 
 
-FT_FEOF ( )
+FT_FEOF()
 Indica se o ponteiro está posicionado no fim do arquivo texto.
 
 FT_FGOTOP()
 Posiciona no início (primeiro caracter da primeira linha) do arquivo texto aberto pela função 
 
-FT_FREADLN ()
+FT_FREADLN()
 Lê e retorna uma linha de texto do arquivo aberto pela função FT_FUse()
 
-FT_FReadLn
-()
+FT_FReadLn()
 Retorna a linha inteira na qual está posicionado o ponteiro para leitura de dados.
-"
-
 
 FT_FSKIP()
 Move o ponteiro, do arquivo texto aberto pela função FT_FUse(), para uma nova posição
+
+FT_FUSE()
+Ler arquivo de texto (TXT)
+
+IncProc
+A função  é utilizada para incrementar valores na régua de progressão, criada através da função ProcRegua()
+
+Join()
+Seleciona todas as linhas a partir das duas tabelas onde existam co-incidências de dados em relação às colunas especificadas para o Join.
+
+len() 
+Retorna o tamanho de uma cadeia de caracteres ou a quantidade de elementos em um array.
+
+Local aOrd  
+"Matriz contendo as ordens de layout para a impressão. Caso não existam várias
+ordens esta matriz deve estar vazia. Ex.: aOrd := {""Código"", ""Descrição"",
+""Telefone""} -> O layout do relatório vai depender da ordem selecionada na tela
+de configuração de impressão"
+
+SetDefault
+Esta função cria uma intefaca onde a opção de imprimir o relatorio podem ser configuradas; duas variaveis ;; Uma controla numero de paginas e a outra vetor ocndendo as opções d impressão 
 
 
 
